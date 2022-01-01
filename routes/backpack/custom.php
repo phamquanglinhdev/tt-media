@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ConfigController;
 use Illuminate\Support\Facades\Route;
 
 // --------------------------
@@ -19,4 +20,6 @@ Route::group([
     Route::crud('user', 'UserCrudController');
     Route::crud('contact', 'ContactCrudController');
     Route::get('charts/contact', 'Charts\ContactChartController@response')->name('charts.contact.index');
+    Route::get('config', [ConfigController::class,"index"])->name('config.index');
+    Route::post('config', [ConfigController::class,"store"])->name('config.store');
 }); // this should be the absolute last line of this file
