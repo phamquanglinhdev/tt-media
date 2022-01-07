@@ -21,7 +21,7 @@ class ConfigController extends Controller
         //Change url
         Config::where("type","=","main_url")->update(["value"=>$request->main_url]);
         Config::where("name","=","T&T Digital Marketing")->update(["value"=>$request->{"feature-T&T_Digital_Marketing"}]);
-        Config::where("name","=","T&T Web Marketing")->update(["value"=>$request->{"feature-T&T_Web_Marketing"}]);
+        Config::where("name","=","T&T Web")->update(["value"=>$request->{"feature-T&T_Web"}]);
         Config::where("name","=","T&T Education")->update(["value"=>$request->{"feature-T&T_Education"}]);
         //Change content, keyword, ana
         Config::where("type","=","content")->update(["value"=>$request->contents]);
